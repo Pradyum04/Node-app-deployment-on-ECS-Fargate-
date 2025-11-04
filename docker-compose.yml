@@ -1,0 +1,9 @@
+services:
+  node-app:
+    container_name: node-app
+    image: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/nodejs-app:latest"
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
