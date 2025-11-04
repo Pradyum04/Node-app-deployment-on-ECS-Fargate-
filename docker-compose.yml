@@ -1,6 +1,6 @@
 services:
   node-app:
-    build: .
+    image: "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/nodejs-app:latest"
     container_name: node-app
     env_file:
       - .env
